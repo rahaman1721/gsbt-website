@@ -1,158 +1,67 @@
-# GSBT Website Clone
+# GSBT Official Website
 
-A reverse-engineered recreation of the [Gojan School of Business and Technology](https://gsbt.edu.in/) official website (`gsbt.edu.in`).
+[![Live Site](https://img.shields.io/badge/Live-gsbt.edu.in-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white)](https://gsbt.edu.in/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+Official website for **Gojan School of Business and Technology (GSBT)**, a leading institution affiliated with Anna University. Live at [gsbt.edu.in](https://gsbt.edu.in/).
+
+---
 
 ## 🏫 About the Institution
 
-**Gojan School of Business and Technology (GSBT)** is an autonomous engineering institution located in Chennai, Tamil Nadu.
-
-- ✅ Approved by AICTE, New Delhi
-- ✅ Affiliated to Anna University, Chennai
-- ✅ NAAC Accredited Institution
-- 🎓 TNEA Code: **1123**
-- 📍 Redhills Road, Avadi, Chennai – 600 062
+Gojan School of Business and Technology is a premier engineering and management institution in Tamil Nadu, India, offering B.E., B.Tech, MBA and MCA programmes under Anna University affiliation.
 
 ---
 
-## 🛠️ Tech Stack
+## 🎯 My Contribution
 
-This is a **vanilla HTML, CSS & JavaScript** website (no framework).
+As the **Frontend Developer & UI Engineer**, I was responsible for:
 
-| Technology | Usage |
+- Architecting and developing the complete multi-department responsive portal (85+ pages).
+- Implementing responsive layouts across all major sections — Academics, Admissions, Campus Life, R&D, Corporate, and Department pages.
+- Designing and coding the full navigation system with multi-level department routing.
+- Ensuring cross-browser compatibility and mobile-first responsive breakpoints.
+- Optimizing page load performance, image delivery, and static asset pipeline.
+- Coordinating with institutional stakeholders for content accuracy and design sign-off.
+
+---
+
+## 📄 Pages & Sections Developed
+
+| Section | Pages |
 |---|---|
-| HTML5 | Page structure |
-| CSS3 (custom `styles.css`) | All styling — 165KB of custom styles |
-| Bootstrap 5.3.2 | Grid, responsive layout |
-| Font Awesome 6.4 | Icons |
-| Animate.css 4.1.1 | Scroll animations |
-| Google Fonts | Inter, Poppins, Montserrat, Outfit |
-| Vanilla JavaScript | Slider, counter, mobile nav, AOS |
+| **Home** | Homepage, Hero Slider, News & Events, Announcements |
+| **About** | Vision & Mission, Management, Accreditations |
+| **Academics** | Programmes, Departments (ECE, CSE, IT, Mech, Civil, MBA, MCA...) |
+| **Admissions** | Eligibility, Process, Fee Structure, Scholarships |
+| **Campus Life** | Facilities, Clubs, Sports, Cultural Events |
+| **Corporate** | Placements, Companies, Training & Development |
+| **R&D** | Research Projects, Publications, Labs |
+| **Utilities** | Contact, Gallery, Downloads, Footer |
 
 ---
 
-## 🎨 Design System
+## 🛠️ Technology Stack
 
-```css
-/* Color Palette */
---primary:       #2f4f2f;   /* Dark Forest Green */
---secondary:     #416d41;   /* Medium Forest Green */
---accent:        #d8ae11;   /* Gold */
---text-dark:     #1a1a1a;
---bg-light:      #f8fafc;
-```
+- **Markup**: HTML5 (Semantic, Accessible)
+- **Styling**: CSS3 (Responsive, Flexbox/Grid)
+- **Interactivity**: Vanilla JavaScript
+- **Image Optimization**: Compressed multi-format assets
+- **Hosting**: Institutional server
 
 ---
 
-## 📁 Project Structure
+## 🌐 Live Website
 
-```
-gsbt-website-clone/
-├── index.html              ← Homepage (main entry point)
-├── css/
-│   ├── styles.css          ← Main custom stylesheet (165KB)
-│   └── chatbot.css         ← Chatbot widget styles
-├── js/
-│   ├── script.js           ← Hero slider, counter, AOS, mobile nav
-│   └── chatbot.js          ← Chatbot functionality
-├── images/
-│   ├── gojan-logo.png      ← Institution logo
-│   ├── slider/             ← Hero carousel images (1.jpg, 2.jpg, 3.jpg)
-│   └── ...
-├── About/                  ← About pages (vision, leadership, etc.)
-├── Academics/              ← Academic pages
-├── Admission/              ← Admission pages
-├── Departments/            ← 16 department pages
-├── Campus-Life/            ← Student clubs, sports, facilities
-├── Utility/                ← NAAC, NIRF, UGC, careers pages
-├── COE/                    ← Exam schedule (Center of Excellence)
-└── README.md
-```
+👉 **[https://gsbt.edu.in/](https://gsbt.edu.in/)**
 
 ---
 
-## 🧭 Navigation Structure
+## 📬 Contact
 
-```
-Home
-About Us ▾
-  Life@Gojan · Why GSBT? · Vision & Mission
-  Chairman · Chairperson · Vice-Chairman · Principal
-  VP Academic · VP Student · Directors
-  Governing Council · Privacy Policy · Committees · Approval & Affiliation
-
-Academics ▾
-  Academic Council · Academic Schedule · Academic Calendar
-  Regulations · Curriculum & Syllabus · Annual Report
-
-Departments ▾ (16 Departments)
-  CSE · AI&ML · Cyber Security · ECE · Mechanical · Medical Electronics
-  CCE · Robotics · IT · AI&DS · CS&BS · Pharma · Biotech
-  Aeronautical · MBA · H&S
-
-Admissions ▾
-  Eligibility · Procedure · Apply Online · Brochure · Scholarships
-
-Placements ▾
-  Corporate Connect · Career Framework · Hiring Highlights
-  Regular Recruiters · Guidance Panel · ED Cell
-
-Accreditation (NAAC · NIRF · UGC · AICTE)
-
-Research & Innovation
-
-Campus Life ▾
-  Student Clubs · Sports · Library · Facilities · Best Practices
-
-Contact
-```
-
----
-
-## ⚙️ Key JavaScript Features
-
-| Feature | Implementation |
-|---|---|
-| Hero Slider | Auto-rotates every 5 seconds, prev/next buttons |
-| Stats Counter | Animates on scroll using `IntersectionObserver` |
-| AOS (Animate on Scroll) | Custom `IntersectionObserver` implementation |
-| Mobile Navigation | Hamburger toggle with dropdown support |
-| FAQ Accordion | Click to expand, closes others |
-| Video Modal | Opens YouTube embed with autoplay |
-
----
-
-## 🚀 How to Run Locally
-
-No build step required — pure HTML/CSS/JS:
-
-```bash
-# Option 1: Open directly in browser
-start index.html
-
-# Option 2: Use VS Code Live Server
-# Install Live Server extension → Right-click index.html → Open with Live Server
-
-# Option 3: Python simple server
-python -m http.server 8080
-# Then visit: http://localhost:8080
-```
-
----
-
-## 📌 Live Site
-
-🌐 **Original:** [https://gsbt.edu.in](https://gsbt.edu.in)
-
-📞 Phone: 044-26311045
-📧 Email: gsbt@gsbt.edu.in
-
----
-
-## 👨‍💻 Developer
-
-**Obaidhur Rahaman**
-Full Stack & Hybrid App Developer | UI/UX Designer
-
-🌐 [Portfolio](https://rahaman1721.framer.website/) · 💼 [LinkedIn](https://www.linkedin.com/in/obaidhur-rahaman-1721z) · 📧 rahaman171920@gmail.com
-
-> *This project was reverse-engineered for portfolio and learning purposes. All content belongs to Gojan School of Business and Technology.*
+**Obaidhur Rahaman**  
+Portfolio: [rahaman1721.framer.website](https://rahaman1721.framer.website)  
+GitHub: [@rahaman1711](https://github.com/rahaman1711)  
+LinkedIn: [obaidhur-rahaman-1721z](https://www.linkedin.com/in/obaidhur-rahaman-1721z)
