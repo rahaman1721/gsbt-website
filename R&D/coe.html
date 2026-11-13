@@ -1,0 +1,1203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COE - Gojan School of Business and Technology</title>
+    <link rel="stylesheet" href="../css/styles.css?v=2.0">
+    <!-- Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --coe-primary: #d8ae11;
+            /* Golden Orange */
+            --coe-light: #e5e7eb;
+            /* Light Grey */
+            --coe-accent: #15874c;
+            /* Green for sub-titles */
+            --coe-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+        }
+
+        .page-hero {
+            padding: 80px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/gojan-building.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-hero .btn-back-hero {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--coe-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Tabs Styling */
+        .coe-nav-container {
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .coe-nav-pills {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .coe-nav-pills .nav-link {
+            background-color: #f1f5f9;
+            color: #4b5563;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 12px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            text-align: center;
+            flex: 1 1 0px;
+            white-space: nowrap;
+        }
+
+        .coe-nav-pills .nav-link:hover {
+            background-color: #e2e8f0;
+            color: #1f2937;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .coe-nav-pills .nav-link.active {
+            background-color: var(--coe-primary);
+            color: #000;
+            border: none;
+            box-shadow: 0 4px 12px rgba(216, 174, 17, 0.4);
+            font-weight: 800;
+        }
+
+        .coe-section-header {
+            color: #8b1d1d;
+            /* Dark Reddish Brown */
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        /* Accordion Custom Styling */
+        .coe-accordion .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 6px !important;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .coe-accordion .accordion-button {
+            background-color: var(--coe-light);
+            color: #1f2937;
+            font-weight: 700;
+            padding: 18px 25px;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .coe-accordion .accordion-button:not(.collapsed) {
+            background-color: var(--coe-primary);
+            color: #000;
+            box-shadow: none;
+        }
+
+        .coe-accordion .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .coe-accordion .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .coe-accordion .accordion-body {
+            padding: 25px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        /* Table Styling */
+        .coe-table {
+            width: 100%;
+            border: 1px solid #eee;
+            border-collapse: collapse;
+        }
+
+        .coe-table th {
+            background-color: #f1f5f9;
+            padding: 15px;
+            font-weight: 700;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .coe-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .coe-table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Link Lists */
+        .coe-link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .coe-link-list li {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+        }
+
+        .coe-link-list li:last-child {
+            border-bottom: none;
+        }
+
+        .coe-link-list a {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .coe-link-list a:hover {
+            color: var(--coe-primary);
+        }
+
+        .coe-link-list i {
+            color: #dc2626;
+            font-size: 1.1rem;
+        }
+
+        /* Result Card */
+        .result-box {
+            background: linear-gradient(135deg, #fff 0%, #fff9ed 100%);
+            padding: 50px;
+            border-radius: 12px;
+            border: 2px dashed var(--coe-primary);
+            text-align: center;
+        }
+
+        .btn-coe-primary {
+            background-color: var(--coe-primary);
+            color: #000;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 6px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-coe-primary:hover {
+            background-color: #c9a10f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216, 174, 17, 0.4);
+        }
+
+        .malpractice-box {
+            background-color: #fff5f5;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 40px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-hero p {
+                font-size: 0.95rem;
+                padding: 0 15px;
+            }
+
+            .coe-nav-pills {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .coe-nav-pills .nav-link {
+                flex: 1 1 calc(50% - 10px);
+                font-size: 0.75rem;
+                padding: 10px 8px;
+                min-height: 45px;
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .coe-section-header {
+                font-size: 1.3rem;
+                margin-top: 20px;
+            }
+
+            .result-box {
+                padding: 30px 15px;
+            }
+
+            .coe-accordion .accordion-button {
+                padding: 15px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <!-- Tier 1: Top Red Information Bar -->
+        <div class="top-info-bar">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="top-bar-left d-flex align-items-center">
+                    <span class="me-3"><i class="fas fa-phone"></i> 044-26311045</span>
+                    <a href="mailto:gsbt@gsbt.edu.in" class="top-link text-lowercase"><i class="fas fa-envelope"></i>
+                        gsbt@gsbt.edu.in</a>
+                </div>
+                <div class="top-bar-marquee">
+                    <div class="top-info-content">
+                        <a href="https://gsbt.edu.in/Utility/naac.html" class="marquee-link">NAAC</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Utility/IQAC/AQAR/aqar.html"
+                            class="marquee-link">AQAR</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://gsbt.edu.in/Utility/nirf.html"
+                            class="marquee-link">NIRF</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://gsbt.edu.in/Utility/ugc.html"
+                            class="marquee-link">UGC</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Campus-Life/student-club.html" class="marquee-link">CLUBS AND
+                            CELLS</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://gsbt.edu.in/Admission/apply_online.html"
+                            class="marquee-link">ONLINE FEE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Admission/admission_procedure.html" class="marquee-link">EXAM SCHEDULE</a>
+                    </div>
+                </div>
+                <div class="top-bar-right d-flex align-items-center">
+                    <a href="https://gsbt.edu.in/Utility/careers.html" class="top-link me-3">Careers</a>
+                    <a href="#" class="top-link me-3">Login</a>
+                    <div class="top-social-icons">
+                        <a href="https://www.facebook.com/gojaneducationalinstitutions" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gojan_educational_institution/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gojan-school-of-business-and-technology-chennai/posts/?feedView=all"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@gojaneducationalinstitutions/videos" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 2: Main Official Logo Bar -->
+        <div class="main-logo-bar">
+            <div class="container py-3">
+                <div class="d-flex align-items-center flex-wrap gap-3">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <img src="../images/gojan-logo.png" alt="Gojan Logo" class="official-header-logo">
+                    </div>
+                    <!-- College Name -->
+                    <div class="official-college-name me-2">
+                        <h2 class="official-title line1 mb-0">GOJAN SCHOOL OF</h2>
+                        <h2 class="official-title line2 mb-0">BUSINESS AND TECHNOLOGY</h2>
+                        <p class="official-subtitle mb-0 mt-1">An Autonomous Institution</p>
+                    </div>
+                    <!-- Vertical Divider -->
+                    <div class="vertical-divider d-none d-md-block"></div>
+                    <!-- Accreditation Text -->
+                    <div class="official-accreditation-text ms-md-2">
+                        <p class="mb-0">Approved by AICTE, New Delhi</p>
+                        <p class="mb-0">Affiliated to Anna University, Chennai</p>
+                        <p class="mb-0">NAAC Accredited Institution</p>
+                    </div>
+                    <!-- Right Side: Badges + Buttons (desktop only) -->
+                    <div class="ms-auto d-none d-lg-flex align-items-center gap-3">
+                        <!-- Achievement Badges -->
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../images/20-years.png" alt="20 Years" class="header-badge-img">
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="d-flex gap-2 align-items-center">
+                            <a href="https://gsbt.edu.in/Admission/apply_online.html" class="header-apply-img-link">
+                                <img src="../images/admission-open.png" alt="Admission Open 2026-27"
+                                    class="header-apply-img">
+                            </a>
+                            <a href="https://gsbt.edu.in/Utility/erp_login.html" class="college-badge">
+                                <span class="badge-text-top">TNEA</span>
+                                <span class="badge-text-bottom">1123</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Mobile Hamburger Button (visible on mobile only) -->
+                    <button class="mobile-nav-toggle d-lg-none ms-auto" id="mobileNavToggle"
+                        aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Tier 3: Navigation Menu Bar -->
+        <nav class="navigation-menu-bar">
+            <div class="container">
+                <ul class="nav-links-list d-flex justify-content-center list-unstyled mb-0">
+                    <li><a href="../index.php">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#">About Us <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/About/life_at_gojan.html">Life@Gojan</a></li>
+                            <li><a href="https://gsbt.edu.in/why_gsbt.html">Why GSBT?</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vision_mission.html">Vision & Mission</a></li>
+                            <li><a href="https://gsbt.edu.in/About/chairman.html">Chairman</a></li>
+                            <li><a href="https://gsbt.edu.in/About/chairperson.html">Chairperson</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vice_chairman.html">Vice-Chairman</a></li>
+                            <li><a href="https://gsbt.edu.in/About/principal.html">Principal</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vp_academic.html">Vice-President(Academic Affairs)</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vp_student.html">Vice-President(Student Affairs)</a></li>
+                            <li><a href="https://gsbt.edu.in/About/directors.html">Directors</a></li>
+                            <li><a href="https://gsbt.edu.in/About/governing_council.html">Governing Council Board</a></li>
+                            <li><a href="https://gsbt.edu.in/About/privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="https://gsbt.edu.in/About/committees.html">Committees</a></li>
+                            <li><a href="https://gsbt.edu.in/About/approval_affiliation.html">Approval and Affiliation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Academics <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Academic/academic_council.html">Academic Council</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/academic_schedule.html">Academic Schedule</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/regulations.html">Regulations</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/academic_calendar.html">Academic Calendar</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/curriculum_syllabus.html">Curriculum & Syllabus</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/rules_regulations.html">Rules & Regulations</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/annual_report.html">Annual Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Admissions <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Admission/admission_eligibility.html">Admission Eligibility</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/admission_procedure.html">Admission Procedure</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/apply_online.html">Apply Online</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/application_form.html">Application Form</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/brochure.html">Admission Brochure</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/scholarship.html">Scholarships</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/education_loan.html">Education Loan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Departments <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-aeronautical.html">Aeronautical Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse.html">Computer Science & Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse-aiml.html">Artificial Intelligence & Machine Learning</a>
+                            </li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse-cyber.html">Cyber Security</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-ece.html">Electronics & Communication Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-mechanical.html">Mechanical & Automation Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-medical.html">Medical Electronics Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cce.html">Computer & Communication Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-robotics.html">Robotics & Automation Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-it.html">Information Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-aids.html">Artificial Intelligence & Data Science</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-csbs.html">Computer Science & Business Systems</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-pharma.html">Pharmaceutical Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-biotech.html">Bio Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-mba.html">Master of Business Administration</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-humanities.html">Humanities and Science</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#">Placements <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Corporate/corporate_connect.html">Corporate Connect</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/career_framework.html">Career Framework</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/hiring_highlights.html">Hiring Highlights</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/regular_recruiters.html">Regular Recruiters</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/guidance_panel.html">Guidance Panel</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/ed_cell.html">ED Cell</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#">Accreditation <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Utility/IQAC/iqac.html">IQAC</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/naac.html">NAAC</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/IQAC/AQAR/aqar.html">AQAR</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/nirf.html">NIRF</a></li>
+                            <li><a href="https://gsbt.edu.in/aicte.html">AICTE</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/ugc.html">UGC</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Research & Innovation <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/R&D/research_development.html">Research & Development Cell</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/quality_objectives.html">Quality Objectives</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/journal_publications.html">Journal and Publications</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/consultancy_training.html">Consultancy and Training</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/research_facilities.html">Research Facilities and activities</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/ipr_patents.html">IPR/Patents</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/startups_incubation.html">Startups and Incubation Centre</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Campus Life <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Campus-Life/student-club.html">Student Club</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/activities.html">Activities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/sports-facilities.html">Sports Facilities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/learning-facilities.html">Learning Facilities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/best-practices.html">Best Practices</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/campus-facilities.html">Campus Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">COE <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/R&D/coe.html">COE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle d-lg-none">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MOBILE DRAWER START -->
+    <!-- Mobile Offcanvas Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <!-- Drawer Header -->
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <img src="../images/gojan-logo.png" alt="Gojan Logo" class="drawer-logo">
+                <div class="drawer-name">
+                    <span class="drawer-title">GOJAN SCHOOL OF</span>
+                    <span class="drawer-sub">BUSINESS AND TECHNOLOGY</span>
+                </div>
+            </div>
+            <button class="drawer-close" id="mobileNavClose" aria-label="Close Navigation">&times;</button>
+        </div>
+        <!-- Drawer Contact Info -->
+        <div class="drawer-contact">
+            <a href="tel:04426311045"><i class="fas fa-phone-alt"></i> 044-26311045</a>
+        </div>
+        <!-- Drawer Navigation -->
+        <nav class="drawer-nav">
+            <ul class="drawer-menu">
+                <li><a href="../index.php">Home</a></li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/About/life_at_gojan.html">Life@Gojan</a></li>
+                        <li><a href="https://gsbt.edu.in/why_gsbt.html">Why GSBT?</a></li>
+                        <li><a href="https://gsbt.edu.in/About/vision_mission.html">Vision &amp; Mission</a></li>
+                        <li><a href="https://gsbt.edu.in/About/chairman.html">Chairman</a></li>
+                        <li><a href="https://gsbt.edu.in/About/chairperson.html">Chairperson</a></li>
+                        <li><a href="https://gsbt.edu.in/About/vice_chairman.html">Vice-Chairman</a></li>
+                        <li><a href="https://gsbt.edu.in/About/principal.html">Principal</a></li>
+                        <li><a href="https://gsbt.edu.in/About/vp_academic.html">Vice-President(Academic Affairs)</a></li>
+                        <li><a href="https://gsbt.edu.in/About/vp_student.html">Vice-President(Student Affairs)</a></li>
+                        <li><a href="https://gsbt.edu.in/About/directors.html">Directors</a></li>
+                        <li><a href="https://gsbt.edu.in/About/governing_council.html">Governing Council Board</a></li>
+                        <li><a href="https://gsbt.edu.in/About/privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="https://gsbt.edu.in/About/committees.html">Committees</a></li>
+                        <li><a href="https://gsbt.edu.in/About/approval_affiliation.html">Approval and Affiliation</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Academics <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Academic/academic_council.html">Academic Council</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/academic_calendar.html">Academic Calendar</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/curriculum_syllabus.html">Curriculum &amp; Syllabus</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/academic_schedule.html">Academic Schedule</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/regulations.html">Regulations</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/rules_regulations.html">Rules &amp; Regulations</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/annual_report.html">Annual Report</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Admissions <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Admission/admission_eligibility.html">Admission Eligibility</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/admission_procedure.html">Admission Procedure</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/apply_online.html">Apply Online</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/application_form.html">Application Form</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/brochure.html">Admission Brochure</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/scholarship.html">Scholarships</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/education_loan.html">Education Loan</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Departments <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-aeronautical.html">Aeronautical Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-cse.html">Computer Science &amp; Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-cse-aiml.html">Artificial Intelligence &amp; Machine Learning</a>
+                        </li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-cse-cyber.html">Cyber Security</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-ece.html">Electronics &amp; Communication Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-mechanical.html">Mechanical &amp; Automation Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-medical.html">Medical Electronics Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-cce.html">Computer &amp; Communication Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-robotics.html">Robotics &amp; Automation Engineering</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-it.html">Information Technology</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-aids.html">Artificial Intelligence &amp; Data Science</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-csbs.html">Computer Science &amp; Business Systems</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-pharma.html">Pharmaceutical Technology</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-biotech.html">Bio Technology</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-mba.html">Master of Business Administration</a></li>
+                        <li><a href="https://gsbt.edu.in/Depatment/dept-humanities.html">Humanities and Science</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Placements <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Corporate/corporate_connect.html">Corporate Connect</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/career_framework.html">Career Framework</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/hiring_highlights.html">Hiring Highlights</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/regular_recruiters.html">Regular Recruiters</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/guidance_panel.html">Guidance Panel</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/ed_cell.html">ED Cell</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Accreditation <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Utility/IQAC/iqac.html">IQAC</a></li>
+                        <li><a href="https://gsbt.edu.in/Utility/naac.html">NAAC</a></li>
+                        <li><a href="https://gsbt.edu.in/Utility/IQAC/AQAR/aqar.html">AQAR</a></li>
+                        <li><a href="https://gsbt.edu.in/Utility/nirf.html">NIRF</a></li>
+                        <li><a href="https://gsbt.edu.in/aicte.html">AICTE</a></li>
+                        <li><a href="https://gsbt.edu.in/Utility/ugc.html">UGC</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Research &amp; Innovation <i
+                            class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/R&D/research_development.html">Research &amp; Development Cell</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/quality_objectives.html">Quality Objectives</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/journal_publications.html">Journal and Publications</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/consultancy_training.html">Consultancy and Training</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/research_facilities.html">Research Facilities and activities</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/ipr_patents.html">IPR/Patents</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/startups_incubation.html">Startups and Incubation Centre</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">Campus Life <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/Campus-Life/student-club.html">Student Club</a></li>
+                        <li><a href="https://gsbt.edu.in/Campus-Life/activities.html">Activities</a></li>
+                        <li><a href="https://gsbt.edu.in/Campus-Life/sports-facilities.html">Sports Facilities</a></li>
+                        <li><a href="https://gsbt.edu.in/Campus-Life/learning-facilities.html">Learning Facilities</a></li>
+                        <li><a href="https://gsbt.edu.in/Campus-Life/best-practices.html">Best Practices</a></li>
+                        <li><a href="https://gsbt.edu.in/Campus-Life/campus-facilities.html">Campus Facilities</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-dropdown">
+                    <button class="drawer-dropdown-toggle">COE <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drawer-submenu">
+                        <li><a href="https://gsbt.edu.in/R&D/coe.html">COE</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Drawer Bottom CTA -->
+        <div class="drawer-cta">
+            <a href="https://gsbt.edu.in/Admission/apply_online.html" class="drawer-apply-btn">Apply Now</a>
+        </div>
+    </div>
+    <!-- MOBILE DRAWER END -->
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container animate__animated animate__fadeIn">
+            <a href="../index.php" class="btn-back-hero"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1>COE</h1>
+            <p>Governing academic assessment, ensuring integrity in evaluations, and providing seamless examination
+                services for all students.</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <!-- New COE Horizontal Tabs -->
+        <div class="coe-nav-container animate__animated animate__fadeInUp">
+            <div class="nav nav-pills coe-nav-pills" id="coeMenu" role="tablist">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#content-constitution"
+                    type="button" role="tab" aria-selected="true">CONSTITUTION OF MEMBERS</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-timetable" type="button"
+                    role="tab" aria-selected="false">TIME TABLE</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-regulations" type="button"
+                    role="tab" aria-selected="false">REGULATIONS</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-curriculum" type="button"
+                    role="tab" aria-selected="false">CURRICULUM & SYLLABI</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-result" type="button" role="tab"
+                    aria-selected="false">RESULT</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-malpractice" type="button"
+                    role="tab" aria-selected="false">MALPRACTICE PENALTIES</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-forms" type="button" role="tab"
+                    aria-selected="false">DOWNLOAD FORMS</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#content-exam-schedule" type="button"
+                    role="tab" aria-selected="false">CIRCULAR</button>
+            </div>
+        </div>
+
+        <div class="tab-content mt-4" id="coeContent">
+            <!-- CONSTITUTION TAB -->
+            <div class="tab-pane fade show active" id="content-constitution">
+                <h3 class="coe-section-header">Constitution of Members</h3>
+                <p class="mb-4 text-center">The Controller of Examination (COE) oversees academic standards,
+                    regulations, and
+                    curriculum
+                    development to ensure quality education.</p>
+                <div class="table-responsive shadow-sm rounded">
+                    <table class="coe-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">S.No</th>
+                                <th width="45%">Category</th>
+                                <th width="45%">Proposed Members</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Controller of Examinations</td>
+                                <td><strong>Dr. ARUNSANKAR G</strong> M.E., M.B.A., Ph.D.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Deputy Controller of Examinations</td>
+                                <td><strong>Mr. KALIDASS R</strong> M.E</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Assistant Controller of Examinations</td>
+                                <td><strong>Dr. PARIMALA P</strong> M.Sc., M.Phil., Ph.D.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TIME TABLE TAB -->
+            <div class="tab-pane fade" id="content-timetable">
+                <h3 class="coe-section-header">Examination Time Table - APRIL/MAY 2026</h3>
+                <div class="accordion coe-accordion" id="accordionTimetable">
+                   <!-- UG Courses -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseUGCourses">
+                                PRACTICAL EXAMINATION
+                            </button>
+                        </h2>
+                        <div id="collapseUGCourses" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionCurriculum">
+                            <div class="accordion-body">
+                                <h6 class="fw-bold mb-3 text-success">PRACTICAL EXAMINATION SLOT – APRIL/MAY - 2026</h6>
+                                <ul class="coe-link-list">
+                                    <li><a href="../pdf/COE/AERO LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - AERONAUTICAL
+                                            ENGINEERING</a></li>
+                                    <li><a href="../pdf/COE/AIML LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE
+                                            (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)</a></li>
+                                    <li><a href="../pdf/COE/CCE LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER AND
+                                            COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="../pdf/COE/CYBER LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE (CYBER
+                                            SECURITY)</a></li>
+                                    <li><a href="../pdf/COE/CSE LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER
+                                            SCIENCE AND ENGINEERING</a></li>
+                                    <li><a href="../pdf/COE/ECE LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ELECTRONICS
+                                            AND COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="../pdf/COE/M&A LAB SLOT (1).pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MECHANICAL AND
+                                            AUTOMATION ENGINEERING</a></li>
+                                    <li><a href="../pdf/COE/ME LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MEDICAL
+                                            ELECTRONICS</a></li>
+                                    <li><a href="../pdf/COE/R&A LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ROBOTICS AND
+                                            AUTOMATION</a></li>
+                                    <li><a href="../pdf/COE/AIDS LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - ARTIFICIAL
+                                            INTELLIGENCE AND DATA SCIENCE</a></li>
+                                    <li><a href="../pdf/COE/BT LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            BIOTECHNOLOGY</a></li>
+                                    <li><a href="../pdf/COE/CSBS LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - COMPUTER
+                                            SCIENCE AND BUSINESS SYSTEMS</a></li>
+                                    <li><a href="../pdf/COE/IT LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - INFORMATION
+                                            TECHNOLOGY</a></li>
+                                    <li><a href="../pdf/COE/PT LAB SLOT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            PHARMACEUTICAL TECHNOLOGY</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- UG Theory Examination -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePGReg">
+                                UG Theory Examination
+                            </button>
+                        </h2>
+                        <div id="collapsePGReg" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRegulations">
+                            <div class="accordion-body">
+                                <ul class="coe-link-list">
+                                    <li><a href="../pdf/COE/UG_21.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> UG Regulation
+                                            2021</a></li>
+                                    <li><a href="../pdf/COE/UG25.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> UG Regulation
+                                            2025</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- PG Theory Examination -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePGReg">
+                                PG Theory Examination
+                            </button>
+                        </h2>
+                        <div id="collapsePGReg" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRegulations">
+                            <div class="accordion-body">
+                                <ul class="coe-link-list">
+                                    <li><a href="../pdf/COE/PG21.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> PG Regulation
+                                            2021</a></li>
+                                    <li><a href="../pdf/COE/PG25.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> PG Regulation
+                                            2025</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REGULATIONS TAB (ACCORDION) -->
+            <div class="tab-pane fade" id="content-regulations">
+                <h3 class="coe-section-header">Academic Regulations</h3>
+                <div class="accordion coe-accordion" id="accordionRegulations">
+                    <!-- UG Regulations -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseUGReg">
+                                UG Regulations
+                            </button>
+                        </h2>
+                        <div id="collapseUGReg" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionRegulations">
+                            <div class="accordion-body">
+                                <ul class="coe-link-list">
+                                    <li><a href="../pdf/COE/REGULATIONS 2025.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> UG Regulation
+                                            2025</a></li>
+                                    <li><a href="../pdf/COE/Regulations 2021.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> UG Regulation
+                                            2021</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PG Regulations -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePGReg">
+                                PG Regulations
+                            </button>
+                        </h2>
+                        <div id="collapsePGReg" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRegulations">
+                            <div class="accordion-body">
+                                <ul class="coe-link-list">
+                                    <li><a href="../pdf/COE/PG Regulations 2025.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> PG Regulation
+                                            2025</a></li>
+                                    <li><a href="../pdf/COE/MBA Academic Regulations 2021.pdf" target="_blank"><i
+                                                class="fas fa-file-pdf"></i> PG Regulation
+                                            2021</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURRICULUM TAB (ACCORDION) -->
+            <div class="tab-pane fade" id="content-curriculum">
+                <h3 class="coe-section-header">Curriculum & Syllabi</h3>
+                <div class="accordion coe-accordion" id="accordionCurriculum">
+                    <!-- UG Courses -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseUGCourses">
+                                UG Courses
+                            </button>
+                        </h2>
+                        <div id="collapseUGCourses" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionCurriculum">
+                            <div class="accordion-body">
+                                <h6 class="fw-bold mb-3 text-success">Regulation 2025</h6>
+                                <ul class="coe-link-list">
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/Mech/B.E.%20Aeronautical%20Engineering.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - AERONAUTICAL
+                                            ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.E.%20CSE%20(AI%20&%20ML).pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE
+                                            (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.E%20-%20Computer%20&%20Comm.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER AND
+                                            COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.E.CSE%20(Cyber%20Sec).pdfhttps://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.E.CSE%20(Cyber%20Sec).pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE (CYBER
+                                            SECURITY)</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/BE%20CSE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER
+                                            SCIENCE AND ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/ECE/B.E%20ECE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ELECTRONICS
+                                            AND COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/Mech/B.E.%20Mechanical%20and%20Automation%20Engineering.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MECHANICAL AND
+                                            AUTOMATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/ECE/B.E.%20Medical%20Electronics.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MEDICAL
+                                            ELECTRONICS</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/Mech/B.E.%20Robotics%20and%20Automation.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ROBOTICS AND
+                                            AUTOMATION</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.Tech.%20AI%20and%20DS.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - ARTIFICIAL
+                                            INTELLIGENCE AND DATA SCIENCE</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/Tech/B.Tech%20Biotech.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            BIOTECHNOLOGY</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.E.%20CSBS%20.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - COMPUTER
+                                            SCIENCE AND BUSINESS SYSTEMS</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/CSIE/B.Tech.%20IT%20.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - INFORMATION
+                                            TECHNOLOGY</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2025_fu/Tech/B.Tech.%20Pharmaceutical%20Technology.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            PHARMACEUTICAL TECHNOLOGY</a></li>
+
+                                    <h6 class="fw-bold mb-3 text-success">Regulation 2021</h6>
+
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/Mech/B.E.Aeronatical.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - AERONAUTICAL
+                                            ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.Cse%20(AIML).pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE
+                                            (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.CCE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER AND
+                                            COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.Cse%20(Cyber%20Security).pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - CSE (CYBER
+                                            SECURITY)</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.CSE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - COMPUTER
+                                            SCIENCE AND ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.ECE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ELECTRONICS
+                                            AND COMMUNICATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/Mech/B.E.MAE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MECHANICAL AND
+                                            AUTOMATION ENGINEERING</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.E.MEE.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - MEDICAL
+                                            ELECTRONICS</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/Mech/B.E.Robotics.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.E - ROBOTICS AND
+                                            AUTOMATION</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.Tech.AIDS.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - ARTIFICIAL
+                                            INTELLIGENCE AND DATA SCIENCE</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/Tech/B.Tech.%20BioTech.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            BIOTECHNOLOGY</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.Tech.CSBS.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - COMPUTER
+                                            SCIENCE AND BUSINESS SYSTEMS</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/IandC/B.Tech.IT.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH - INFORMATION
+                                            TECHNOLOGY</a></li>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afug_2021_fu/Revised/Tech/B.Tech.Pharma.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> B.TECH -
+                                            PHARMACEUTICAL TECHNOLOGY</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PG Courses -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePGCourses">
+                                PG Courses
+                            </button>
+                        </h2>
+                        <div id="collapsePGCourses" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionCurriculum">
+                            <div class="accordion-body">
+                                <h6 class="fw-bold mb-3 text-success">Regulation 2025</h6>
+                                <ul class="coe-link-list">
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afpg_2025_fu/MBA/M.B.A..pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> MBA-Master of
+                                            Business Administration</a></li>
+
+                                    <h6 class="fw-bold mb-3 text-success">Regulation 2021</h6>
+                                    <li><a href="https://cac.annauniv.edu/aidetails/afpg_2021_fu/Management/M.B.A.pdf"
+                                            target="_blank"><i class="fa-regular fa-dot"></i> MBA-Master of
+                                            Business Administration</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULT TAB -->
+            <div class="tab-pane fade" id="content-result">
+                <h3 class="coe-section-header">Examination Results</h3>
+            </div>
+
+            <!-- MALPRACTICE TAB -->
+            <div class="tab-pane fade" id="content-malpractice">
+                <h3 class="coe-section-header text-danger">Malpractice Penalties</h3>
+                <div class="malpractice-box shadow-sm">
+                    <p class="text-dark mb-4">The institution maintains strict policies regarding academic integrity and
+                        examination conduct. Any form of malpractice during examinations will be dealt with severely
+                        according to the stipulated guidelines.</p>
+                    <a href="#" target="_blank" class="btn btn-danger px-4 fw-bold">
+                        <i class="fas fa-file-download me-2"></i> MALPRACTICE PENALTY
+                    </a>
+                </div>
+            </div>
+
+            <!-- FORMS TAB -->
+            <div class="tab-pane fade" id="content-forms">
+                <h3 class="coe-section-header">Download Official Forms.</h3>
+                <div class="p-4 bg-light rounded border">
+                    <ul class="coe-link-list">
+                        <li><a href="#" target="_blank"><i class=""></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CIRCULAR TAB -->
+            <div class="tab-pane fade" id="content-exam-schedule">
+                <h3 class="coe-section-header">Circular</h3>
+                <div class="p-4 bg-light rounded border">
+                    <ul class="coe-link-list">
+                        <li><a href="../pdf/COE/TT.pdf" target="_blank"><i class="fas fa-file-pdf"></i>
+                                June 2026 Semester Examination Schedule
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="contact">
+        <!-- Wavy Top Shape -->
+        <div class="footer-wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container-fluid">
+            <!-- Centered Branding -->
+            <div class="footer-branding-center">
+                <div class="footer-logo-box">
+                    <img src="../images/gojan-logo.png" alt="Gojan Logo" class="footer-logo-main">
+                </div>
+                <div class="footer-college-info">
+                    <h2 class="footer-college-name-center">GOJAN SCHOOL OF</h2>
+                    <p class="footer-college-subname">BUSINESS AND TECHNOLOGY</p>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <!-- Column 1: Explore -->
+                <div class="footer-col">
+                    <h4>EXPLORE GSBT</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/About/life_at_gojan.html">About Us</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/admission_eligibility.html">Admission Eligibility</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/corporate_connect.html">Corporate Connect</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/research_development.html">R&D Cell</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/exam_cell.html">Exam Cell</a></li>
+                        <li><a href="https://gsbt.edu.in/chakravyuha-25/">Chakravyuha-25</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/conference.html">Conference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Information Hub -->
+                <div class="footer-col">
+                    <h4>INFORMATION HUB</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/Academic/academic_calendar.html">Academic Calendar</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/curriculum_syllabus.html">Curriculum & Syllabus</a></li>
+                        <li><a href="https://gsbt.edu.in/aicte.html">AICTE Approval Copy</a></li>
+                        <li><a href="https://gsbt.edu.in/About/approval_affiliation.html">Mandatory Disclosure</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/annual_report.html">Annual Report</a></li>
+                        <li><a href="https://gsbt.edu.in/code_of_conduct.html">Code of Conduct</a></li>
+                        <li><a href="https://gsbt.edu.in/blogs.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/footer/newsletter.html">Newsletter</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/value_added_courses.html">Value Added Courses</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/rti.html">RTI</a></li>
+                        <li><a href="https://portal.vmedulife.com/public/grievance/#/login/gojan-chennai">Online
+                                Grievance and Feedback</a></li>
+                        <li><a href="https://www.aicte-india.org/feedback/index.php">AICTE Feedback</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/scholarship.html">Merit Scholarship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Us -->
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> <span>044-26311045</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917010723984" target="_blank"
+                                style="color: inherit; text-decoration: none;">+91 70107 23984</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:gsbt@gsbt.edu.in">gsbt@gsbt.edu.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Gojan College Road, Edapalayam,<br>Alamathi via,
+                                Redhills,<br>Chennai - 600052.</span></li>
+                    </ul>
+                    <div class="follow-us-section">
+                        <h5>Follow Us:</h5>
+                        <div class="footer-social-links-flat">
+                            <a href="https://www.facebook.com/gojaneducationalinstitutions" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/gojan_educational_institution/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/gojan-school-of-business-and-technology-chennai/posts/?feedView=all"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@gojaneducationalinstitutions/videos" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End .footer-grid -->
+        </div><!-- End .container -->
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                &copy; 2026 Gojan School of Business and Technology. All Rights Reserved. | Designed by <a
+                    href="https://www.sprakdigi.in/" target="_blank" class="designer-link">SprakDigi</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('.navigation-menu-bar');
+            if (window.scrollY > 150) {
+                nav.style.position = 'fixed'; nav.style.top = '0'; nav.style.width = '100%';
+            } else { nav.style.position = 'sticky'; }
+        });
+
+        // Mobile Nav
+        const toggle = document.getElementById('mobileNavToggle');
+        if (toggle) toggle.addEventListener('click', () => { /* open nav logic */ });
+    </script>
+    <!-- GSBT Chatbot -->
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <script>window.GSBT_ROOT_PREFIX = '../';</script>
+    <script src="../js/chatbot.js"></script>
+</body>
+
+</html>

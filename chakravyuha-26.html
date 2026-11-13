@@ -1,0 +1,1966 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAKRAVYUHA 2K26 - National Level Technical Symposium | Gojan School of Business and Technology</title>
+    <meta name="description" content="CHAKRAVYUHA 2K26 is a One Day National Level Technical Symposium organized by Gojan School of Business and Technology on 26 September 2026 with exciting prizes worth ₹2 Lakhs.">
+    <link rel="icon" href="images/gojan-logo.png" type="image/x-icon">
+
+    <!-- Critical CSS & Bootstrap -->
+    <link rel="stylesheet" href="css/styles.css?v=2.1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --symp-primary: #0e2a1b;
+            --symp-primary-light: #1b4d32;
+            --symp-gold: #eab308;
+            --symp-gold-dark: #ca8a04;
+            --symp-gold-light: #fef08a;
+            --symp-accent: #f59e0b;
+            --symp-dark: #0f172a;
+            --symp-slate: #1e293b;
+            --symp-card-bg: #ffffff;
+            --symp-border: #e2e8f0;
+            --symp-text: #334155;
+            --symp-text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--symp-text);
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .symp-hero {
+            position: relative;
+            background: linear-gradient(180deg, rgba(14, 42, 27, 0.78) 0%, rgba(5, 16, 10, 0.88) 60%, rgba(5, 16, 10, 0.96) 100%),
+                        url('images/gojan-building.jpg') center 35%/cover no-repeat;
+            color: #ffffff;
+            padding: 85px 0 95px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .symp-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(234, 179, 8, 0.14) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .btn-back-hero {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-back-hero:hover {
+            background: rgba(234, 179, 8, 0.3);
+            border-color: #fde047;
+            color: #fef08a;
+            transform: translateY(-2px);
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(234, 179, 8, 0.15);
+            border: 1px solid rgba(234, 179, 8, 0.4);
+            color: #fde047;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(234, 179, 8, 0.15);
+        }
+
+        .symp-title-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.6rem, 7vw, 4.8rem);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.05;
+            background: linear-gradient(135deg, #ffffff 30%, #fef08a 60%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+            margin-bottom: 12px;
+        }
+
+        .symp-tagline-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+            font-weight: 700;
+            color: #ffffff !important;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .symp-college-lead {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .symp-motto-quote {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.06);
+            border-left: 4px solid var(--symp-gold);
+            padding: 12px 24px;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #fef08a;
+            margin-bottom: 30px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-prize-card {
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.25) 0%, rgba(202, 138, 4, 0.1) 100%);
+            border: 2px solid rgba(234, 179, 8, 0.6);
+            border-radius: 16px;
+            padding: 20px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(234, 179, 8, 0.2);
+            animation: pulse-glow 3s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(234, 179, 8, 0.3); }
+            100% { box-shadow: 0 0 35px rgba(234, 179, 8, 0.6); }
+        }
+
+        .hero-prize-icon {
+            font-size: 2.5rem;
+            color: #fde047;
+        }
+
+        .hero-prize-text {
+            text-align: left;
+        }
+
+        .hero-prize-text span {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 700;
+        }
+
+        .hero-prize-text strong {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn-symp-primary {
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+            color: #0f172a !important;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 14px 34px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+            box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+        }
+
+        .btn-symp-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(234, 179, 8, 0.6);
+            background: linear-gradient(135deg, #fde047 0%, #eab308 100%);
+        }
+
+        .btn-symp-outline {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-symp-outline:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Countdown */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .countdown-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 12px 18px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .countdown-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fde047;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-tag.tag-gold {
+            background: #fef9c3;
+            color: #854d0e;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .section-divider-bar {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #eab308, #22c55e);
+            border-radius: 4px;
+            margin: 0 auto 30px;
+        }
+
+        /* ===== HIGHLIGHTS GRID ===== */
+        .highlight-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 22px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e1;
+        }
+
+        .highlight-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0e2a1b 0%, #1b4d32 100%);
+            color: #fde047;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .highlight-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .highlight-info h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+
+        .highlight-info p {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+
+        .highlight-info .highlight-sub {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 1px;
+            line-height: 1.2;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-box-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, #eab308, #1b4d32);
+        }
+
+        .about-lead-text {
+            font-size: 1.12rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .about-pill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .about-pill-item i {
+            color: #16a34a;
+            font-size: 1.2rem;
+        }
+
+        /* ===== DEPARTMENT EVENTS SECTION ===== */
+        .events-control-bar {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 35px;
+        }
+
+        .event-search-input {
+            border-radius: 50px;
+            padding: 12px 22px 12px 45px;
+            border: 1px solid #cbd5e1;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .event-search-input:focus {
+            border-color: #eab308;
+            box-shadow: 0 0 0 4px rgba(234, 179, 8, 0.15);
+        }
+
+        .search-icon-pos {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .dept-filter-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+        }
+
+        .dept-filter-btn {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dept-filter-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .dept-filter-btn.active {
+            background: #0e2a1b;
+            color: #fde047;
+            border-color: #0e2a1b;
+            box-shadow: 0 4px 12px rgba(14, 42, 27, 0.25);
+        }
+
+        /* Dept Card */
+        .dept-event-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dept-event-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .dept-event-card::top-bar {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #eab308, #10b981);
+        }
+
+        .dept-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dept-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #ecfdf5;
+            color: #059669;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .dept-title-text h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+
+        .dept-title-text span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .event-item-badge {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 10px 14px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: #1e293b;
+            transition: all 0.2s ease;
+        }
+
+        .event-item-badge:hover {
+            background: #fefce8;
+            border-color: #fde047;
+            transform: translateX(4px);
+        }
+
+        .dept-card-footer {
+            margin-top: auto;
+            padding-top: 14px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .dept-reg-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            background: #f1f5f9;
+            color: #0e2a1b;
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 9px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+        .dept-reg-link:hover {
+            background: #0e2a1b;
+            color: #fde047;
+        }
+
+        /* ===== WHY PARTICIPATE CARDS ===== */
+        .why-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .why-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.09);
+            border-color: #cbd5e1;
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .why-icon-1 { background: #fee2e2; color: #dc2626; }
+        .why-icon-2 { background: #fef3c7; color: #d97706; }
+        .why-icon-3 { background: #dcfce7; color: #16a34a; }
+        .why-icon-4 { background: #e0e7ff; color: #4f46e5; }
+        .why-icon-5 { background: #f3e8ff; color: #9333ea; }
+
+        .why-box h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .why-box p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ===== REGISTRATION BANNER ===== */
+        .reg-banner-container {
+            background: radial-gradient(circle at 10% 20%, #1e4a30 0%, #0a1f13 90%);
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(10, 31, 19, 0.35);
+        }
+
+        .reg-banner-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.2) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .qr-card-box {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .qr-placeholder {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #0f172a;
+        }
+
+        .qr-placeholder svg {
+            width: 140px;
+            height: 140px;
+        }
+
+        /* ===== COORDINATORS SECTION ===== */
+        .coordinator-lead-card {
+            background: linear-gradient(135deg, #0e2a1b 0%, #16422a 100%);
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(14, 42, 27, 0.25);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+
+        .lead-badge-tag {
+            display: inline-block;
+            background: rgba(234, 179, 8, 0.2);
+            color: #fde047;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(234, 179, 8, 0.4);
+        }
+
+        .lead-coord-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .lead-coord-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fde047;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            transition: transform 0.2s ease;
+        }
+
+        .lead-coord-phone:hover {
+            transform: scale(1.05);
+            color: #ffffff;
+        }
+
+        /* Dept Coordinator Card */
+        .dept-coord-grid-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 18px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .dept-coord-grid-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e1;
+        }
+
+        .dept-coord-dept-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1b4d32;
+            background: #ecfdf5;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border: 1px solid #a7f3d0;
+        }
+
+        .dept-coord-person {
+            margin-bottom: 12px;
+        }
+
+        .dept-coord-person:last-child {
+            margin-bottom: 0;
+        }
+
+        .person-name {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .person-phone-link {
+            color: #047857;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .person-phone-link:hover {
+            color: #065f46;
+            text-decoration: underline !important;
+        }
+
+        /* Floating Quick Action */
+        .floating-symp-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.92);
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .floating-symp-bar {
+                width: 90%;
+                justify-content: space-between;
+                padding: 10px 16px;
+                gap: 10px;
+            }
+            .floating-symp-bar span {
+                font-size: 0.8rem;
+            }
+            .btn-symp-primary {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+            .about-box-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SYNC_HEADER_START -->
+    <header class="main-header">
+        <!-- Tier 1: Top Red Information Bar -->
+        <div class="top-info-bar">
+            <div class="container d-flex align-items-center">
+                <div class="top-bar-left d-flex align-items-center">
+                    <span class="me-3"><i class="fas fa-phone"></i> 044-26311045</span>
+                    <a href="mailto:gsbt@gsbt.edu.in" class="top-link text-lowercase"><i class="fas fa-envelope"></i>
+                        gsbt@gsbt.edu.in</a>
+                </div>
+                <div class="top-bar-marquee top-red-marquee-wrapper">
+                    <!-- Original -->
+                    <span class="d-inline-block px-3">
+                        <a href="https://gsbt.edu.in/Utility/naac.html" class="marquee-link">NAAC</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Utility/IQAC/AQAR/aqar.html" class="marquee-link">AQAR</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Utility/nirf.html" class="marquee-link">NIRF</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Utility/ugc.html" class="marquee-link">UGC</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="https://gsbt.edu.in/Campus-Life/student-club.html" class="marquee-link">CLUBS AND
+                            CELLS</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://gsbt.edu.in/Admission/apply_online.html"
+                            class="marquee-link">ONLINE FEE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://gsbt.edu.in/COE/coe.html"
+                            class="marquee-link">EXAM SCHEDULE</a>
+                    </span>
+                </div>
+                <div class="top-bar-right d-flex align-items-center ms-auto">
+                    <a href="https://gsbt.edu.in/Utility/careers.html" class="top-link me-3">Careers</a>
+                    <a href="#" class="top-link me-3">Login</a>
+                    <div class="top-social-icons">
+                        <a href="https://www.facebook.com/gojaneducationalinstitutions" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gojan_educational_institution/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gojan-school-of-business-and-technology-chennai/posts/?feedView=all"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@gojaneducationalinstitutions/videos" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 2: Main Official Logo Bar -->
+        <div class="main-logo-bar">
+            <div class="container py-3">
+                <div class="d-flex align-items-center flex-wrap gap-3">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <img src="images/gojan-logo.png" alt="Gojan Logo" class="official-header-logo">
+                    </div>
+                    <!-- College Name -->
+                    <div class="official-college-name me-2">
+                        <h2 class="official-title line1 mb-0">GOJAN SCHOOL OF</h2>
+                        <h2 class="official-title line2 mb-0">BUSINESS AND TECHNOLOGY</h2>
+                        <p class="official-subtitle mb-0 mt-1">An Autonomous Institution</p>
+                    </div>
+                    <!-- Vertical Divider -->
+                    <div class="vertical-divider d-none d-md-block"></div>
+                    <!-- Accreditation Text -->
+                    <div class="official-accreditation-text ms-md-2">
+                        <p class="mb-0">Approved by AICTE, New Delhi</p>
+                        <p class="mb-0">Affiliated to Anna University, Chennai</p>
+                        <p class="mb-0">NAAC Accredited Institution</p>
+                    </div>
+                    <!-- Right Side: Badges + Buttons (desktop only) -->
+                    <div class="ms-auto d-none d-lg-flex align-items-center gap-3">
+                        <!-- Achievement Badges -->
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="images/20-years.png" alt="20 Years" class="header-badge-img">
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="d-flex gap-2 align-items-center">
+                            <a href="https://gsbt.edu.in/Admission/apply_online.html" class="header-apply-img-link">
+                                <img src="images/admission-open.png" alt="Admission Open 2026-27"
+                                    class="header-apply-img">
+                            </a>
+                            <a href="https://gsbt.edu.in/Utility/erp_login.html" class="college-badge">
+                                <span class="badge-text-top">TNEA</span>
+                                <span class="badge-text-bottom">1123</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Mobile Hamburger Button (visible on mobile only) -->
+                    <button class="mobile-nav-toggle d-lg-none ms-auto" id="mobileNavToggle"
+                        aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 3: Navigation Menu Bar -->
+        <nav class="navigation-menu-bar">
+            <div class="container">
+                <ul class="nav-links-list d-flex justify-content-center list-unstyled mb-0">
+                    <li><a href="index.php">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#">About Us <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/About/life_at_gojan.html">Life@Gojan</a></li>
+                            <li><a href="https://gsbt.edu.in/why_gsbt.html">Why GSBT?</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vision_mission.html">Vision & Mission</a></li>
+                            <li><a href="https://gsbt.edu.in/About/chairman.html">Chairman</a></li>
+                            <li><a href="https://gsbt.edu.in/About/chairperson.html">Chairperson</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vice_chairman.html">Vice-Chairman</a></li>
+                            <li><a href="https://gsbt.edu.in/About/principal.html">Principal</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vp_academic.html">Vice-President(Academic Affairs)</a></li>
+                            <li><a href="https://gsbt.edu.in/About/vp_student.html">Vice-President(Student Affairs)</a></li>
+                            <li><a href="https://gsbt.edu.in/About/directors.html">Directors</a></li>
+                            <li><a href="https://gsbt.edu.in/About/governing_council.html">Governing Council Board</a></li>
+                            <li><a href="https://gsbt.edu.in/About/privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="https://gsbt.edu.in/About/committees.html">Committees</a></li>
+                            <li><a href="https://gsbt.edu.in/About/approval_affiliation.html">Approval and Affiliation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Academics <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Academic/academic_council.html">Academic Council</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/academic_schedule.html">Academic Schedule</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/regulations.html">Regulations</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/academic_calendar.html">Academic Calendar</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/curriculum_syllabus.html">Curriculum & Syllabus</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/rules_regulations.html">Rules & Regulations</a></li>
+                            <li><a href="https://gsbt.edu.in/Academic/annual_report.html">Annual Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Admissions <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Admission/admission_eligibility.html">Admission Eligibility</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/admission_procedure.html">Admission Procedure</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/apply_online.html">Apply Online</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/application_form.html">Application Form</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/brochure.html">Admission Brochure</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/prospectus.html">GOJAN PROSPECTUS</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/scholarship.html">Scholarships</a></li>
+                            <li><a href="https://gsbt.edu.in/Admission/education_loan.html">Education Loan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Departments <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-aeronautical.html">Aeronautical Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse.html">Computer Science & Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse-aiml.html">Artificial Intelligence & Machine Learning</a>
+                            </li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cse-cyber.html">Cyber Security</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-ece.html">Electronics & Communication Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-mechanical.html">Mechanical & Automation Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-medical.html">Medical Electronics Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-cce.html">Computer & Communication Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-robotics.html">Robotics & Automation Engineering</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-it.html">Information Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-aids.html">Artificial Intelligence & Data Science</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-csbs.html">Computer Science & Business Systems</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-pharma.html">Pharmaceutical Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-biotech.html">Bio Technology</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-mba.html">Master of Business Administration</a></li>
+                            <li><a href="https://gsbt.edu.in/Depatment/dept-humanities.html">Humanities and Science</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#">Placements <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Corporate/corporate_connect.html">Corporate Connect</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/career_framework.html">Career Framework</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/hiring_highlights.html">Hiring Highlights</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/regular_recruiters.html">Regular Recruiters</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/guidance_panel.html">Guidance Panel</a></li>
+                            <li><a href="https://gsbt.edu.in/Corporate/ed_cell.html">ED Cell</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#">Accreditation <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Utility/IQAC/iqac.html">IQAC</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/naac.html">NAAC</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/IQAC/AQAR/aqar.html">AQAR</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/nirf.html">NIRF</a></li>
+                            <li><a href="https://gsbt.edu.in/aicte.html">AICTE</a></li>
+                            <li><a href="https://gsbt.edu.in/Utility/ugc.html">UGC</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Research & Innovation <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/R&D/research_development.html">Research & Development Cell</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/quality_objectives.html">Quality Objectives</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/journal_publications.html">Journal and Publications</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/consultancy_training.html">Consultancy and Training</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/research_facilities.html">Research Facilities and activities</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/ipr_patents.html">IPR/Patents</a></li>
+                            <li><a href="https://gsbt.edu.in/R&D/startups_incubation.html">Startups and Incubation Centre</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">Campus Life <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/Campus-Life/student-club.html">Student Club</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/activities.html">Activities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/sports-facilities.html">Sports Facilities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/learning-facilities.html">Learning Facilities</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/best-practices.html">Best Practices</a></li>
+                            <li><a href="https://gsbt.edu.in/Campus-Life/campus-facilities.html">Campus Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#">COE <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu-list">
+                            <li><a href="https://gsbt.edu.in/R&D/coe.html">COE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle d-lg-none">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- SYNC_HEADER_END -->
+
+    <!-- Offcanvas Mobile Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="drawer-header">
+            <img src="images/gojan-logo.png" alt="Gojan Logo" class="drawer-logo">
+            <button class="drawer-close" id="mobileNavClose">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links list-unstyled">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="https://gsbt.edu.in/why_gsbt.html">Why GSBT?</a></li>
+                <li><a href="https://gsbt.edu.in/chakravyuha-25.html" style="color: #eab308; font-weight: bold;">Chakravyuha 2K26</a></li>
+                <li><a href="https://gsbt.edu.in/Admission/apply_online.html">Apply Online</a></li>
+                <li><a href="https://gsbt.edu.in/Utility/careers.html">Careers</a></li>
+                <li><a href="https://gsbt.edu.in/COE/coe.html">COE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MAIN HERO -->
+    <section class="symp-hero text-center">
+        <div class="container position-relative" style="z-index: 2;">
+            
+            <a href="index.php" class="btn-back-hero animate__animated animate__fadeInDown">
+                <i class="fas fa-arrow-left"></i> BACK TO HOME
+            </a>
+
+            <div class="d-block">
+                <div class="hero-badge-pill animate__animated animate__fadeInDown">
+                    <i class="fas fa-bolt text-warning"></i> One Day National Level Technical Symposium &bull; 26 September 2026
+                </div>
+            </div>
+
+            <h1 class="symp-title-main animate__animated animate__zoomIn">CHAKRAVYUHA 2K26</h1>
+            <p class="symp-tagline-sub animate__animated animate__fadeInUp mb-0">One Day National Level Technical Symposium</p>
+
+        </div>
+    </section>
+
+    <!-- SECTION: HIGHLIGHTS AT A GLANCE -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">Key Information</span>
+                <h2 class="section-title">Event Highlights</h2>
+                <div class="section-divider-bar"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Date &amp; Duration</h4>
+                            <p>26 September 2026</p>
+                            <span class="highlight-sub">(One Day Event)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Prize Pool</h4>
+                            <p>₹2 Lakhs</p>
+                            <span class="highlight-sub">Worth Prizes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Participation</h4>
+                            <p>Open to All</p>
+                            <span class="highlight-sub">All Departments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Venue &amp; Mode</h4>
+                            <p>On-Campus</p>
+                            <span class="highlight-sub">GSBT Chennai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ABOUT CHAKRAVYUHA -->
+    <section class="py-5" style="background-color: #f8fafc;">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <span class="section-tag tag-gold">About The Symposium</span>
+                    <h2 class="section-title text-start mb-3">About CHAKRAVYUHA 2K26</h2>
+                    <p class="about-lead-text">
+                        <strong>CHAKRAVYUHA 2K26</strong> is a One Day National Level Technical Symposium organized by <strong>Gojan School of Business and Technology</strong>. The symposium provides a premier platform for students to showcase their technical knowledge, creativity, innovation, problem-solving abilities, and emerging technology skills.
+                    </p>
+                    <p class="about-lead-text">
+                        The event brings together passionate students from diverse engineering and technology disciplines to participate in a wide spectrum of technical competitions, project presentations, coding challenges, innovative activities, and creative technical events.
+                    </p>
+                    <p class="about-lead-text">
+                        With exciting competitions and attractive prizes worth <strong>₹2 Lakhs</strong>, CHAKRAVYUHA 2K26 aims to encourage innovation, collaboration, technical excellence, and knowledge sharing among future engineers.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="about-box-card">
+                        <h4 class="fw-bold text-dark mb-3"><i class="fas fa-bullseye text-warning me-2"></i> Symposium Highlights</h4>
+                        <div class="about-pill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>13+ Engineering Disciplines</span>
+                        </div>
+                        <div class="about-pill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>35+ High-Impact Technical Competitions</span>
+                        </div>
+                        <div class="about-pill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Exciting ₹2 Lakhs Total Prize Pool</span>
+                        </div>
+                        <div class="about-pill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Participation Certificates for All</span>
+                        </div>
+                        <div class="about-pill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>National Level Networking & Peer Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DEPARTMENT-WISE EVENTS -->
+    <section class="py-5 bg-white" id="events">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <span class="section-tag">Competitions & Challenges</span>
+                <h2 class="section-title">Department-Wise Events</h2>
+                <div class="section-divider-bar"></div>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="row g-4" id="eventsGrid">
+
+                <!-- Aeronautical -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Aeronautical Engineering</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Aero Modeling Skyfall</span></li>
+                            <li class="event-item-badge"><span>Aero Strike</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>AI & Machine Learning</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Inferra</span></li>
+                            <li class="event-item-badge"><span>Champions Make Attack</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AI & DS -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>AI & Data Science</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Blind Code</span></li>
+                            <li class="event-item-badge"><span>Project Expo</span></li>
+                            <li class="event-item-badge"><span>ShipWreck</span></li>
+                            <li class="event-item-badge"><span>Paper Presentation</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Biotechnology -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Biotechnology</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Poster Presentation</span></li>
+                            <li class="event-item-badge"><span>Tech Link</span></li>
+                            <li class="event-item-badge"><span>Scientific Detective</span></li>
+                            <li class="event-item-badge"><span>Molecular Connections</span></li>
+                            <li class="event-item-badge"><span>Silent Signals</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Computer & Communication Engineering -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Computer & Communication (CCE)</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>CodeScape</span></li>
+                            <li class="event-item-badge"><span>Web Frenzy</span></li>
+                            <li class="event-item-badge"><span>FunFlux</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Computer Science and Engineering -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Computer Science & Engineering</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>TechAura</span></li>
+                            <li class="event-item-badge"><span>Tech Quest</span></li>
+                            <li class="event-item-badge"><span>ReelRush</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CSE - Cyber Security -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>CSE – Cyber Security</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Cyber Crime Investigation</span></li>
+                            <li class="event-item-badge"><span>Memory Matrix</span></li>
+                            <li class="event-item-badge"><span>Reverse Pictionary</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Computer Science & Business Systems -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>CS & Business Systems (CSBS)</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Innovesee</span></li>
+                            <li class="event-item-badge"><span>Quizverse</span></li>
+                            <li class="event-item-badge"><span>Marvel Mayhem</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Electronics and Communication Engineering -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Electronics & Communication</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Soldering</span></li>
+                            <li class="event-item-badge"><span>Draw & Decode</span></li>
+                            <li class="event-item-badge"><span>Circuit Challenge</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Information Technology -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Information Technology</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Ayalaan Tech Escape</span></li>
+                            <li class="event-item-badge"><span>Prompt Wars</span></li>
+                            <li class="event-item-badge"><span>One Minute Movie</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mechanical Engineering -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Mechanical Engineering</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Crack the Cue</span></li>
+                            <li class="event-item-badge"><span>Medical Dumb Charades</span></li>
+                            <li class="event-item-badge"><span>Puzzle Blitz</span></li>
+                            <li class="event-item-badge"><span>Medical Checkup</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mechanical & Automation -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Mechanical & Automation</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Breaking Assembly</span></li>
+                            <li class="event-item-badge"><span>Mechanical Escape Room</span></li>
+                            <li class="event-item-badge"><span>Fact or Fake</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Robotics & Automation -->
+                <div class="col-lg-4 col-md-6 event-card-wrapper">
+                    <div class="dept-event-card">
+                        <div class="dept-card-header">
+                            <div class="dept-title-text">
+                                <h3>Robotics & Automation</h3>
+                                <span>Department Events</span>
+                            </div>
+                        </div>
+                        <ul class="event-tags-list mb-0">
+                            <li class="event-item-badge"><span>Robot Territory</span></li>
+                            <li class="event-item-badge"><span>Connects</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: WHY & WHO CAN PARTICIPATE -->
+    <section class="py-5" style="background-color: #f8fafc;">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <span class="section-tag tag-gold">Why Join Us</span>
+                <h2 class="section-title">Why Participate in CHAKRAVYUHA 2K26?</h2>
+                <div class="section-divider-bar"></div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-box">
+                        <h3>Showcase Your Talent</h3>
+                        <p>Demonstrate your technical knowledge, creativity and problem-solving skills through exciting competitions.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-box">
+                        <h3>Compete at the National Level</h3>
+                        <p>Interact and compete with students from different institutions and academic backgrounds.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="why-box">
+                        <h3>Win Exciting Prizes</h3>
+                        <p>Participate in the various events and compete for attractive prizes worth ₹2 Lakhs.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="why-box">
+                        <h3>Learn &amp; Innovate</h3>
+                        <p>Explore emerging technologies and gain practical exposure through technical activities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="why-box">
+                        <h3>Connect with Peers</h3>
+                        <p>Meet students, faculty members and technology enthusiasts from different disciplines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Who Can Participate Callout -->
+            <div class="about-box-card text-center" style="max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%);">
+                <h3 class="fw-bold text-dark mb-2">Who Can Participate?</h3>
+                <p class="lead text-muted mb-0" style="font-size: 1.05rem;">
+                    <strong>CHAKRAVYUHA 2K26 is open to students from all departments.</strong><br>
+                    Students can participate in department-specific technical events based on their interests and eligibility requirements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: COORDINATORS DIRECTORY -->
+    <section class="py-5" style="background-color: #f8fafc;" id="coordinators">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <span class="section-tag">Direct Support & Contact</span>
+                <h2 class="section-title">Faculty & Student Coordinators</h2>
+                <div class="section-divider-bar"></div>
+            </div>
+
+            <!-- Leadership Coordinators -->
+            <div class="row g-4 mb-5">
+                <!-- Symposium Coordinator -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="coordinator-lead-card">
+                        <div>
+                            <span class="lead-badge-tag">Symposium Coordinator</span>
+                            <h3 class="lead-coord-name">Mr. Prabhu K</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+                            <a href="tel:9176112444" class="lead-coord-phone">
+                                <i class="fas fa-phone"></i> 9176112444
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Coordinator 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="coordinator-lead-card" style="background: linear-gradient(135deg, #163623 0%, #1e4b31 100%);">
+                        <div>
+                            <span class="lead-badge-tag">Staff Coordinator</span>
+                            <h3 class="lead-coord-name">Mr. Ranjith P</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+                            <a href="tel:9025682191" class="lead-coord-phone">
+                                <i class="fas fa-phone"></i> 9025682191
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Coordinator 2 -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="coordinator-lead-card" style="background: linear-gradient(135deg, #163623 0%, #1e4b31 100%);">
+                        <div>
+                            <span class="lead-badge-tag">Staff Coordinator</span>
+                            <h3 class="lead-coord-name">Mr. Rohith Ramanan M</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+                            <a href="tel:6369349233" class="lead-coord-phone">
+                                <i class="fas fa-phone"></i> 6369349233
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Coordinators Grid with Search/Filter -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h4 class="fw-bold text-dark mb-0">Department Coordinators</h4>
+                <div style="max-width: 300px; width: 100%;">
+                    <input type="text" id="coordSearchInput" class="form-control form-control-sm rounded-pill" placeholder="Filter coordinator or dept...">
+                </div>
+            </div>
+
+            <div class="row g-3" id="coordGrid">
+
+                <!-- AERO -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="aero aeronautical gokul">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">AERO</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Gokul M</div>
+                                <a href="tel:8825771883" class="person-phone-link"><i class="fas fa-phone"></i> 8825771883</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI&ML -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="aiml artificial intelligence machine learning pavithra siva">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">AI & ML</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Ms. Pavithra R</div>
+                                <a href="tel:7904271623" class="person-phone-link"><i class="fas fa-phone"></i> 7904271623</a>
+                            </div>
+                            <div class="dept-coord-person mt-2 pt-2 border-top">
+                                <div class="person-name">Mr. Siva M</div>
+                                <a href="tel:9384305310" class="person-phone-link"><i class="fas fa-phone"></i> 93843 05310</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI&DS -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="aids artificial intelligence data science aravind">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">AI & DS</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Aravind A</div>
+                                <a href="tel:8122775458" class="person-phone-link"><i class="fas fa-phone"></i> 8122775458</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSBS -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="csbs computer science business systems synthia suresh">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">CSBS</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Ms. Synthia Sri</div>
+                                <a href="tel:7448391908" class="person-phone-link"><i class="fas fa-phone"></i> 74483 91908</a>
+                            </div>
+                            <div class="dept-coord-person mt-2 pt-2 border-top">
+                                <div class="person-name">Mr. R. Suresh</div>
+                                <a href="tel:7010779680" class="person-phone-link"><i class="fas fa-phone"></i> 7010779680</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="it information technology lydhiyal sangamithra">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">IT</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Lydhiyal S</div>
+                                <a href="tel:7550279455" class="person-phone-link"><i class="fas fa-phone"></i> 7550279455</a>
+                            </div>
+                            <div class="dept-coord-person mt-2 pt-2 border-top">
+                                <div class="person-name">Ms. Sangamithra S</div>
+                                <a href="tel:7448319908" class="person-phone-link"><i class="fas fa-phone"></i> 74483 19908</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSE -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="cse computer science engineering sangeetha stephen">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">CSE</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Ms. Sangeetha Priya S</div>
+                                <a href="tel:9789082703" class="person-phone-link"><i class="fas fa-phone"></i> 9789082703</a>
+                            </div>
+                            <div class="dept-coord-person mt-2 pt-2 border-top">
+                                <div class="person-name">Mr. G. Stephen Raj</div>
+                                <a href="tel:9884673755" class="person-phone-link"><i class="fas fa-phone"></i> 9884673755</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSE - Cyber Security -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="cyber security priyanka">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">Cyber Security</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Ms. Priyanka R</div>
+                                <a href="tel:9789223972" class="person-phone-link"><i class="fas fa-phone"></i> 9789223972</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ECE -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="ece electronics pon subhers">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">ECE</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Pon Subhers A</div>
+                                <a href="tel:9047632870" class="person-phone-link"><i class="fas fa-phone"></i> 9047632870</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mechanical -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="me mechanical dhanasekar aasif">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">Mechanical (ME)</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Dhanasekar M</div>
+                                <a href="tel:9789082703" class="person-phone-link"><i class="fas fa-phone"></i> 9789082703</a>
+                            </div>
+                            <div class="dept-coord-person mt-2 pt-2 border-top">
+                                <div class="person-name">Mr. Mohamed Aasif H</div>
+                                <a href="tel:9791487334" class="person-phone-link"><i class="fas fa-phone"></i> 9791487334</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mechanical & Automation -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="ma mechanical automation pon subhers">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">M & A</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Pon Subhers A</div>
+                                <a href="tel:9047632870" class="person-phone-link"><i class="fas fa-phone"></i> 9047632870</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Robotics & Automation -->
+                <div class="col-lg-3 col-md-4 col-sm-6 coord-card-item" data-keywords="ra robotics automation aasif">
+                    <div class="dept-coord-grid-card">
+                        <div>
+                            <span class="dept-coord-dept-tag">Robotics (R & A)</span>
+                            <div class="dept-coord-person">
+                                <div class="person-name">Mr. Mohamed Aasif H</div>
+                                <a href="tel:9791487334" class="person-phone-link"><i class="fas fa-phone"></i> 9791487334</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Note Alert -->
+            <div class="mt-4 p-3 bg-white rounded-3 border text-center text-muted small">
+                <i class="fas fa-info-circle text-primary me-1"></i> Note: For any event-specific inquiries or team registration assistance, feel free to call the respective department coordinator or the chief symposium coordinator.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer" id="contact">
+        <!-- Wavy Top Shape -->
+        <div class="footer-wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container-fluid">
+            <!-- Centered Branding -->
+            <div class="footer-branding-center">
+                <div class="footer-logo-box">
+                    <img src="images/gojan-logo.png" alt="Gojan Logo" class="footer-logo-main">
+                </div>
+                <div class="footer-college-info">
+                    <h2 class="footer-college-name-center">GOJAN SCHOOL OF</h2>
+                    <p class="footer-college-subname">BUSINESS AND TECHNOLOGY</p>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <!-- Column 1: Explore -->
+                <div class="footer-col">
+                    <h4>EXPLORE GSBT</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/About/life_at_gojan.html">About Us</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/admission_eligibility.html">Admission Eligibility</a></li>
+                        <li><a href="https://gsbt.edu.in/Corporate/corporate_connect.html">Corporate Connect</a></li>
+                        <li><a href="https://gsbt.edu.in/R&D/research_development.html">R&D Cell</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/exam_cell.html">Exam Cell</a></li>
+                        <li><a href="https://gsbt.edu.in/chakravyuha-25.html" class="fw-bold text-warning">Chakravyuha-26</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/conference.html">Conference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Information Hub -->
+                <div class="footer-col">
+                    <h4>INFORMATION HUB</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/Academic/academic_calendar.html">Academic Calendar</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/curriculum_syllabus.html">Curriculum & Syllabus</a></li>
+                        <li><a href="https://gsbt.edu.in/aicte.html">AICTE Approval Copy</a></li>
+                        <li><a href="https://gsbt.edu.in/About/approval_affiliation.html">Mandatory Disclosure</a></li>
+                        <li><a href="https://gsbt.edu.in/Academic/annual_report.html">Annual Report</a></li>
+                        <li><a href="https://gsbt.edu.in/code_of_conduct.html">Code of Conduct</a></li>
+                        <li><a href="https://gsbt.edu.in/blogs.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://gsbt.edu.in/footer/newsletter.html">Newsletter</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/value_added_courses.html">Value Added Courses</a></li>
+                        <li><a href="https://gsbt.edu.in/footer/rti.html">RTI</a></li>
+                        <li><a href="https://portal.vmedulife.com/public/grievance/#/login/gojan-chennai">Online
+                                Grievance and Feedback</a></li>
+                        <li><a href="https://www.aicte-india.org/feedback/index.php">AICTE Feedback</a></li>
+                        <li><a href="https://gsbt.edu.in/Admission/scholarship.html">Merit Scholarship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Us -->
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> <span>044-26311001</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917010723984" target="_blank"
+                                style="color: inherit; text-decoration: none;">+91 70107 23984</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:gsbt@gsbt.edu.in">gsbt@gsbt.edu.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Gojan College Road, Edapalayam,<br>Alamathi via,
+                                Redhills,<br>Chennai - 600052.</span></li>
+                    </ul>
+                    <div class="follow-us-section">
+                        <h5>Follow Us:</h5>
+                        <div class="footer-social-links-flat">
+                            <a href="https://www.facebook.com/gojaneducationalinstitutions" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/gojan_educational_institution/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/gojan-school-of-business-and-technology-chennai/posts/?feedView=all"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@gojaneducationalinstitutions/videos" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End .footer-grid -->
+        </div><!-- End .container -->
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                &copy; 2026 Gojan School of Business and Technology. All Rights Reserved. | Designed by <a
+                    href="https://www.sprakdigi.in/" target="_blank" class="designer-link">SprakDigi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js?v=1.1"></script>
+
+    <script>
+        // === Offcanvas Mobile Navigation ===
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+
+        function openMobileNav() {
+            if (mobileNavDrawer) mobileNavDrawer.classList.add('active');
+            if (mobileNavOverlay) {
+                mobileNavOverlay.style.display = 'block';
+                setTimeout(() => mobileNavOverlay.classList.add('active'), 10);
+            }
+            if (mobileNavToggle) mobileNavToggle.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            if (mobileNavDrawer) mobileNavDrawer.classList.remove('active');
+            if (mobileNavOverlay) {
+                mobileNavOverlay.classList.remove('active');
+                setTimeout(() => { mobileNavOverlay.style.display = 'none'; }, 300);
+            }
+            if (mobileNavToggle) mobileNavToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (mobileNavToggle) mobileNavToggle.addEventListener('click', openMobileNav);
+        if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+        if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+        // === Coordinator Live Filter ===
+        const coordSearchInput = document.getElementById('coordSearchInput');
+        const coordCards = document.querySelectorAll('.coord-card-item');
+
+        if (coordSearchInput) {
+            coordSearchInput.addEventListener('input', function () {
+                const q = this.value.trim().toLowerCase();
+                coordCards.forEach(card => {
+                    const text = (card.getAttribute('data-keywords') + ' ' + card.innerText).toLowerCase();
+                    if (q === '' || text.includes(q)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
+
+    <!-- GSBT Chatbot -->
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script>window.GSBT_ROOT_PREFIX = '';</script>
+    <script src="js/chatbot.js?v=2.0"></script>
+</body>
+
+</html>
