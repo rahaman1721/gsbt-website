@@ -1,4 +1,4 @@
-﻿// Navbar Scroll Effect - Removed as new header is sticky by default
+// Navbar Scroll Effect - Removed as new header is sticky by default
 
 // Video Modal Logic
 const videoModal = document.getElementById('videoModal');
@@ -176,4 +176,3 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 // Experts Comments Section Interactivity (Optional)
 // Currently handled by CSS hover, but can be extended here if needed.
-
