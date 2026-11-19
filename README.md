@@ -7,6 +7,13 @@
 
 Official website for **Gojan School of Business and Technology (GSBT)**, a leading institution affiliated with Anna University. Live at [gsbt.edu.in](https://gsbt.edu.in/).
 
+<div align="center">
+  <br/>
+  <img src="docs/screenshots/01-gsbt-campus-portal.jpg" alt="GSBT Official Institutional Portal" width="600" style="border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.25);" />
+  <p><sub><b>GSBT Official Web Portal</b> — Comprehensive 85+ page institutional website built with responsive navigation & dynamic department routing</sub></p>
+  <br/>
+</div>
+
 ---
 
 ## 🏫 About the Institution
